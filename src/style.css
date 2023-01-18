@@ -69,6 +69,7 @@ li {
   border: none;
   font-size: 1rem;
   font-style: italic;
+  outline: none;
 }
 
 .task {
@@ -90,6 +91,5 @@ li {
 }
 
 .to_do_input {
-  color: grey;
   cursor: pointer;
 }
