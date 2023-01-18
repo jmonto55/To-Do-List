@@ -33,3 +33,17 @@ const taskTextareaArr = document.querySelectorAll('.task_textarea');
 taskTextareaArr.forEach((e) => {
   e.onchange = () => { editSelectedTask(e.id, e.value); };
 });
+
+taskTextareaArr.forEach((e) => {
+  e.onfocus = () => {
+    e.style.background = '#1D3237';
+    e.parentElement.parentElement.style.background = '#1D3237';
+  };
+});
+
+taskTextareaArr.forEach((e) => {
+  e.onblur = () => {
+    e.style.background = '#101010';
+    e.parentElement.parentElement.style.background = '#101010';
+  };
+});
