@@ -16,5 +16,9 @@ displayTasks();
 localStorage.setItem('toDoList', JSON.stringify(taskList));
 
 const addTaskText = document.querySelector('.add_to_list');
+const addTaskIcon = document.querySelector('#submit_icon');
+const refreshIcon = document.querySelector('#refresh_icon');
 
 addTaskText.addEventListener('change', addTaskToList);
+addTaskIcon.addEventListener('click', addTaskToList);
+refreshIcon.onclick = () => { window.location.reload(); };
