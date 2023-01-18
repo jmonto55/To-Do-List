@@ -3,6 +3,7 @@ import './style.css';
 import addTaskToList from './modules/addTask.js';
 import displayTasks from './modules/displayTasks.js';
 import removeTaskFromList from './modules/removeTask.js';
+import editSelectedTask from './modules/editTask.js';
 
 const taskList = JSON.parse(localStorage.getItem('toDoList'));
 
@@ -26,4 +27,9 @@ const removeButtons = document.querySelectorAll('.remove_button');
 
 removeButtons.forEach((e) => {
   e.onclick = () => { removeTaskFromList(e.id); };
+});
+
+const taskTextareaArr = document.querySelectorAll('.task_textarea');
+taskTextareaArr.forEach((e) => {
+  e.onchange = () => { editSelectedTask(e.id, e.value); };
 });

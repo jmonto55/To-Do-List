@@ -21,10 +21,10 @@ const displayTasks = () => {
     </li>`;
     taskList.forEach((e) => {
       listSection.innerHTML += `
-      <li id="${e.index}" class="task">
-        <div class="task_container">
-          <input id="${e.index}" class="to_do_input" type="checkbox">
-          <label>${e.description}</label>
+      <li class="task">
+        <div id="${e.index}" class="task_container">
+          <input class="to_do_input" type="checkbox">
+          <input id="${Math.random()}" class="task_textarea" type="text" placeholder="${e.description}"></input>
         </div>
         <span id="${e.index}" class="material-symbols-outlined remove_button">delete</span>
       </li>`;
