@@ -1,3 +1,95 @@
-.hello {
-  color: red;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family:
+    "Open Sans",
+    "Lucida Grande",
+    "tahoma",
+    "verdana",
+    "arial",
+    sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  box-shadow: 0 0 24px -4px rgba(0, 0, 0, 0.63);
+}
+
+header {
+  width: 60vw;
+  min-width: 300px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid silver 1px;
+  padding: 15px;
+}
+
+.tasks_list {
+  width: 60vw;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.main_title {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.task_container {
+  width: 60%;
+  display: flex;
+}
+
+.task_container input {
+  margin-right: 10px;
+}
+
+li {
+  display: flex;
+  list-style: none;
+  border-bottom: solid silver 1px;
+  padding: 15px;
+}
+
+.add_task {
+  justify-content: space-between;
+}
+
+.add_to_list {
+  border: none;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.task {
+  padding: 15px;
+  justify-content: space-between;
+}
+
+.clear_tasks {
+  display: flex;
+  justify-content: center;
+  background-color: #f6f6f6;
+  color: grey;
+  cursor: pointer;
+}
+
+.material-symbols-outlined {
+  color: grey;
+  cursor: pointer;
+}
+
+.to_do_input {
+  color: grey;
+  cursor: pointer;
 }
