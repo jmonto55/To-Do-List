@@ -33,9 +33,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Awesome Books <a name="about-project"></a>
+# 📖 To Do List <a name="about-project"></a>
 
-**Awesome Books** is a web where the user can see a list with awesome books, they can also add or remove any book to the list.
+**To Do List** is a web where the user can add, remove and display all the tasks for the day.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -72,9 +72,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Awesome Books let the user see and update a list of awesome books**
-- **Awesome Books allows the user to add or remove any book from the list**
-- **Awesome Books stores all data in Local Storage so the user never loose the book list**
+- **To Do List let the user see and update a list of today's tasks**
+- **To Do List allows the user to add or remove any task from the list**
+- **To Do List allows the user to reorder tasks**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -121,11 +121,6 @@ To run the project, execute the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-
-👤 **Dennis Every**
-
-- GitHub: [@dennis-every](https://github.com/dennis-every)
-
 👤 **Jose Montoya**
 
 - GitHub: [@jmonto55](https://github.com/jmonto55)
@@ -136,8 +131,7 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **We will refactor the JavaScript code using classes to make it more modular.**
-- [ ] **We will add 2 more pages to improve the user experience while navigating the web.**
+- [ ] **I will add more functionality in the future**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
