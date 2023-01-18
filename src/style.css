@@ -12,6 +12,7 @@
 }
 
 body {
+  background: #cfcfcf;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,6 +22,7 @@ body {
 
 main {
   box-shadow: 0 0 24px -4px rgba(0, 0, 0, 0.63);
+  background: #fff;
 }
 
 header {

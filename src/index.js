@@ -42,7 +42,7 @@ const displayTasks = () => {
         <input id="${e.index}" class="to_do_input" type="checkbox">
         <p>${e.description}</p>
       </div>
-      <span class="material-symbols-outlined">delete_forever</span>
+      <span id="${e.index}" class="material-symbols-outlined">delete_forever</span>
     </li>`;
   });
   listSection.innerHTML += `
