@@ -1,28 +1,28 @@
 /* eslint-disable linebreak-style */
 
-import _ from 'lodash';
+// import _ from 'lodash';
 import './style.css';
 
-let taskList = [
+const taskList = [
   {
-    description: "Wake up",
+    description: 'Wake up',
     completed: true,
-    index: 0
+    index: 0,
   },
   {
-    description: "Have breakfast",
+    description: 'Have breakfast',
     completed: true,
-    index: 1
+    index: 1,
   },
   {
-    description: "Get ready",
+    description: 'Get ready',
     completed: true,
-    index: 2
+    index: 2,
   },
   {
-    description: "Start working",
+    description: 'Start working',
     completed: true,
-    index: 3
+    index: 3,
   },
 ];
 
@@ -51,7 +51,6 @@ const displayTasks = () => {
     </li>`;
 };
 
-window.onload = ()  => {
+window.onload = () => {
   displayTasks();
 };
-
