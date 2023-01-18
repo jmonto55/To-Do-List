@@ -18,8 +18,8 @@ const addTaskText = document.querySelector('.add_to_list');
 const addTaskIcon = document.querySelector('#submit_icon');
 const refreshIcon = document.querySelector('#refresh_icon');
 
-addTaskText.addEventListener('change', addTaskToList);
-addTaskIcon.addEventListener('click', addTaskToList);
+addTaskText.onchange = () => { addTaskToList(); };
+addTaskIcon.onclick = () => { addTaskToList(); };
 refreshIcon.onclick = () => { window.location.reload(); };
 
 const removeButtons = document.querySelectorAll('.remove_button');
