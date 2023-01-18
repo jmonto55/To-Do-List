@@ -37,17 +37,17 @@ const displayTasks = () => {
     </li>`;
     }
     listSection.innerHTML += `
-    <li class="task">
+    <li id="${e.index}" class="task">
       <div class="task_container">
         <input id="${e.index}" class="to_do_input" type="checkbox">
-        <p>${e.description}</p>
+        <label>${e.description}</label>
       </div>
-      <span id="${e.index}" class="material-symbols-outlined">delete_forever</span>
+      <span id="${e.index}" class="material-symbols-outlined">delete</span>
     </li>`;
   });
   listSection.innerHTML += `
     <li class="clear_tasks">
-      <p>Clear all completed</p>
+      <button class="clear_all" type="submit">Clear all completed</button>
     </li>`;
 };
 
