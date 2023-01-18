@@ -32,7 +32,7 @@ const displayTasks = () => {
     if (e.index === 0) {
       listSection.innerHTML += `
     <li class="add_task">
-      <p>Add to your list...</p>
+      <input class="add_to_list" type="text" placeholder="Add to your list..." />
       <span class="material-symbols-outlined">subdirectory_arrow_left</span>
     </li>`;
     }
