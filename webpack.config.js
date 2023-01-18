@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -9,16 +11,16 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-        template: './src/index.html',
+      template: './src/index.html',
     }),
   ],
-  output:{
+  output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[hash:8].js',
     sourceMapFilename: '[name].[hash:8].map',
     chunkFilename: '[id].[hash:8].js',
     clean: true,
-},
+  },
   optimization: {
     runtimeChunk: 'single',
   },
