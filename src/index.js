@@ -2,55 +2,15 @@
 
 // import _ from 'lodash';
 import './style.css';
+import addTaskToList from './modules/addTask.js';
+import displayTasks from './modules/displayTasks.js';
 
-const taskList = [
-  {
-    description: 'Wake up',
-    completed: true,
-    index: 0,
-  },
-  {
-    description: 'Have breakfast',
-    completed: true,
-    index: 1,
-  },
-  {
-    description: 'Get ready',
-    completed: true,
-    index: 2,
-  },
-  {
-    description: 'Start working',
-    completed: true,
-    index: 3,
-  },
-];
+const taskList = JSON.parse(localStorage.getItem('toDoList'));
 
-const displayTasks = () => {
-  const listSection = document.querySelector('.tasks_list');
-  taskList.forEach((e) => {
-    if (e.index === 0) {
-      listSection.innerHTML += `
-    <li class="add_task">
-      <input class="add_to_list" type="text" placeholder="Add to your list..." />
-      <span class="material-symbols-outlined">subdirectory_arrow_left</span>
-    </li>`;
-    }
-    listSection.innerHTML += `
-    <li id="${e.index}" class="task">
-      <div class="task_container">
-        <input id="${e.index}" class="to_do_input" type="checkbox">
-        <label>${e.description}</label>
-      </div>
-      <span id="${e.index}" class="material-symbols-outlined">delete</span>
-    </li>`;
-  });
-  listSection.innerHTML += `
-    <li class="clear_tasks">
-      <button class="clear_all" type="submit">Clear all completed</button>
-    </li>`;
-};
+displayTasks();
 
-window.onload = () => {
-  displayTasks();
-};
+localStorage.setItem('toDoList', JSON.stringify(taskList));
+
+const addTaskText = document.querySelector('.add_to_list');
+
+addTaskText.addEventListener('change', addTaskToList);
