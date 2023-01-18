@@ -61,10 +61,9 @@ header {
   background: #101010;
   border: none;
   font-size: 1rem;
-  color: #f5f5f5;
 }
 
-::-webkit-input-placeholder {
+.task_textarea::-webkit-input-placeholder {
   color: #f5f5f5;
 }
 
