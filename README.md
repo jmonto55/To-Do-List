@@ -100,10 +100,14 @@ In order to run this project you need:
 
 ### Setup
 
-Clone this repository to your desired folder:
+To get a local copy up and running follow these simple example steps.
 
-- use git clone https://github.com/jmonto55/awesome_books.git
-- Open the files in your text editor.
+1- Copy this link https://github.com/jmonto55/To-Do-List
+2- Get the directory that you want to clone the repository.
+3- Open the command prompt in this directory.
+4- Write git clone git@github.com:jmonto55/To-Do-List.git
+5- Go to the repository folder in your command prompt cd To-Do-List.
+6- Run npm install to install the dev dependencies for linters
 
 ### Install
 
