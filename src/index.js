@@ -7,6 +7,10 @@ import displayTasks from './modules/displayTasks.js';
 
 const taskList = JSON.parse(localStorage.getItem('toDoList'));
 
+if (!taskList) {
+  localStorage.setItem('toDoList', JSON.stringify([]));
+}
+
 displayTasks();
 
 localStorage.setItem('toDoList', JSON.stringify(taskList));
