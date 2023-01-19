@@ -8,10 +8,11 @@ const toggleFinishedTask = (e) => {
 
 const clearSelectedTasks = () => {
   let taskList = JSON.parse(localStorage.getItem('toDoList'));
-  taskList = taskList.filter((completed) => completed.completed != true);
+  taskList = taskList.filter((completed) => completed.completed !== true);
   let i = 0;
   taskList.forEach((task) => {
     task.index = i;
+    // eslint-disable-next-line no-plusplus
     i++;
   });
   localStorage.setItem('toDoList', JSON.stringify(taskList));
