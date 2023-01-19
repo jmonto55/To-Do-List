@@ -7,7 +7,15 @@ const toggleFinishedTask = (e) => {
 };
 
 const clearSelectedTasks = () => {
-  console.log('is working');
+  let taskList = JSON.parse(localStorage.getItem('toDoList'));
+  taskList = taskList.filter((completed) => completed.completed != true);
+  let i = 0;
+  taskList.forEach((task) => {
+    task.index = i;
+    i++;
+  });
+  localStorage.setItem('toDoList', JSON.stringify(taskList));
+  window.location.reload();
 };
 
 export { toggleFinishedTask, clearSelectedTasks };
