@@ -12,8 +12,7 @@ const clearSelectedTasks = () => {
   let i = 0;
   taskList.forEach((task) => {
     task.index = i;
-    // eslint-disable-next-line no-plusplus
-    i++;
+    i += 1;
   });
   localStorage.setItem('toDoList', JSON.stringify(taskList));
   window.location.reload();

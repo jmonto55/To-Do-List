@@ -1,4 +1,3 @@
-/* eslint-disable no-plusplus */
 import displayTasks from './displayTasks.js';
 
 let taskList = JSON.parse(localStorage.getItem('toDoList'));
@@ -8,7 +7,7 @@ const removeTaskFromList = (id) => {
   let i = 0;
   taskList.forEach((task) => {
     task.index = i;
-    i++;
+    i += 1;
   });
   localStorage.setItem('toDoList', JSON.stringify(taskList));
   displayTasks();
