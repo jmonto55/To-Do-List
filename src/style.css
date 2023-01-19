@@ -132,3 +132,12 @@ li {
 .to_do_input {
   cursor: pointer;
 }
+
+.line_through {
+  text-decoration: line-through;
+  color: rgb(120, 120, 120);
+}
+
+.change_color::-webkit-input-placeholder {
+  color: rgb(120, 120, 120);
+}

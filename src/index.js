@@ -3,6 +3,7 @@ import addTaskToList from './modules/addTask.js';
 import displayTasks from './modules/displayTasks.js';
 import removeTaskFromList from './modules/removeTask.js';
 import editSelectedTask from './modules/editTask.js';
+import { toggleFinishedTask, clearSelectedTasks } from './modules/clarAllTasks.js';
 
 const taskList = JSON.parse(localStorage.getItem('toDoList'));
 
@@ -46,3 +47,11 @@ taskTextareaArr.forEach((e) => {
     e.parentElement.parentElement.style.background = '#101010';
   };
 });
+
+const checkBoxArr = document.querySelectorAll('.to_do_input');
+checkBoxArr.forEach((e) => {
+  e.onchange = () => { toggleFinishedTask(e); };
+});
+
+const clearTasksButton = document.querySelector('.clear_tasks');
+clearTasksButton.onclick = () => { clearSelectedTasks(); };
