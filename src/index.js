@@ -26,12 +26,12 @@ refreshIcon.onclick = () => { window.location.reload(); };
 const removeButtons = document.querySelectorAll('.remove_button');
 
 removeButtons.forEach((e) => {
-  e.onclick = () => { removeTaskFromList(e.id); };
+  e.onclick = () => { removeTaskFromList(e.parentElement.id); };
 });
 
 const taskTextareaArr = document.querySelectorAll('.task_textarea');
 taskTextareaArr.forEach((e) => {
-  e.onchange = () => { editSelectedTask(e.id, e.value); };
+  e.onchange = () => { editSelectedTask(e.parentElement.parentElement.id, e.value); };
 });
 
 taskTextareaArr.forEach((e) => {
