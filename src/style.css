@@ -79,6 +79,9 @@ li {
 }
 
 .add_task {
+  padding: 15px;
+  display: flex;
+  border-bottom: solid grey 1px;
   justify-content: space-between;
 }
 
@@ -111,6 +114,7 @@ li {
   height: 100%;
   cursor: pointer;
   transition: ease-in all 0.1s;
+  padding: 15px;
 }
 
 .clear_all:hover {
