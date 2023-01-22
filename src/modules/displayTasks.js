@@ -1,5 +1,4 @@
-let taskList = JSON.parse(localStorage.getItem('toDoList'));
-if (!taskList) { taskList = []; }
+let taskList = JSON.parse(localStorage.getItem('toDoList')) || [];
 
 const displayTasks = () => {
   const listSection = document.querySelector('.tasks_list');
@@ -7,7 +6,7 @@ const displayTasks = () => {
   taskList.forEach((e) => {
     let completedCheck = '';
     let styleCheck = '';
-    if (e.completed === true) {
+    if (e.completed) {
       completedCheck = 'checked';
       styleCheck = 'line_through change_color';
     }

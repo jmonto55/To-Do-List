@@ -5,11 +5,7 @@ import removeTaskFromList from './modules/removeTask.js';
 import editSelectedTask from './modules/editTask.js';
 import { toggleFinishedTask, clearSelectedTasks } from './modules/clarAllTasks.js';
 
-const taskList = JSON.parse(localStorage.getItem('toDoList'));
-
-if (!taskList) {
-  localStorage.setItem('toDoList', JSON.stringify([]));
-}
+const taskList = JSON.parse(localStorage.getItem('toDoList')) || [];
 
 displayTasks();
 
