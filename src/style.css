@@ -137,11 +137,7 @@ li {
   cursor: pointer;
 }
 
-.line_through {
+.line_through::-webkit-input-placeholder {
+  color: rgb(120, 120, 120);
   text-decoration: line-through;
-  color: rgb(120, 120, 120);
-}
-
-.change_color::-webkit-input-placeholder {
-  color: rgb(120, 120, 120);
 }
