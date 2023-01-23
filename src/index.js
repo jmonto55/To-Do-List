@@ -51,3 +51,13 @@ checkBoxArr.forEach((e) => {
 
 const clearTasksButton = document.querySelector('.clear_tasks');
 clearTasksButton.onclick = () => { clearSelectedTasks(); };
+
+const updateIndex = (arr) => {
+  let i = 0;
+  arr.forEach((task) => {
+    task.index = i;
+    i += 1;
+  });
+};
+
+export default updateIndex;

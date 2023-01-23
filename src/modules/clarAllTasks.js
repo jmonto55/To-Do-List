@@ -1,4 +1,5 @@
 import displayTasks from './displayTasks.js';
+import updateIndex from '../index.js';
 
 const toggleFinishedTask = (e) => {
   e.nextElementSibling.classList.toggle('line_through');
@@ -10,12 +11,8 @@ const toggleFinishedTask = (e) => {
 
 const clearSelectedTasks = () => {
   let taskList = JSON.parse(localStorage.getItem('toDoList'));
-  taskList = taskList.filter((completed) => completed.completed !== true);
-  let i = 0;
-  taskList.forEach((task) => {
-    task.index = i;
-    i += 1;
-  });
+  taskList = taskList.filter((completed) => !completed.completed);
+  updateIndex(taskList);
   localStorage.setItem('toDoList', JSON.stringify(taskList));
   displayTasks();
   window.location.reload();
