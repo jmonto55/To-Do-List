@@ -1,7 +1,7 @@
 import displayTasks from './displayTasks.js';
 import { getLocalData, setLocalData } from './storage.js';
 
-class Task {
+export class Task {
   constructor(description, index) {
     this.description = description;
     this.completed = false;
