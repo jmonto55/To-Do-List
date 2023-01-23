@@ -1,10 +1,11 @@
 import displayTasks from './displayTasks.js';
+import { getLocalData, setLocalData } from './storage.js';
 
-const taskList = JSON.parse(localStorage.getItem('toDoList'));
+const taskList = getLocalData();
 
 const editSelectedTask = (id, val) => {
   taskList[id].description = val;
-  localStorage.setItem('toDoList', JSON.stringify(taskList));
+  setLocalData(taskList);
   displayTasks();
   window.location.reload();
 };

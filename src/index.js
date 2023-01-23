@@ -4,12 +4,13 @@ import displayTasks from './modules/displayTasks.js';
 import removeTaskFromList from './modules/removeTask.js';
 import editSelectedTask from './modules/editTask.js';
 import { toggleFinishedTask, clearSelectedTasks } from './modules/clarAllTasks.js';
+import { getLocalData, setLocalData } from './modules/storage.js'
 
-const taskList = JSON.parse(localStorage.getItem('toDoList')) || [];
+const taskList = getLocalData() || [];
 
 displayTasks();
 
-localStorage.setItem('toDoList', JSON.stringify(taskList));
+setLocalData(taskList);
 
 const addTaskText = document.querySelector('.add_to_list');
 const addTaskIcon = document.querySelector('#submit_icon');

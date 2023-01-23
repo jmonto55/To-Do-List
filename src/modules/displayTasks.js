@@ -1,4 +1,6 @@
-let taskList = JSON.parse(localStorage.getItem('toDoList')) || [];
+import { getLocalData } from './storage.js';
+
+let taskList = getLocalData() || [];
 
 const displayTasks = () => {
   const listSection = document.querySelector('.tasks_list');
