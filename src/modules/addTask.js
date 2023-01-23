@@ -11,7 +11,7 @@ export class Task {
 
 const addTaskToList = () => {
   const addTask = document.querySelector('.add_to_list');
-  const taskList = getLocalData() || [];
+  const taskList = getLocalData();
   let index = taskList ? taskList.length : 0;
   const newTask = new Task(addTask.value, index);
 

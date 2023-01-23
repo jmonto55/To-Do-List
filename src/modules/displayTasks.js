@@ -1,6 +1,6 @@
 import { getLocalData } from './storage.js';
 
-let taskList = getLocalData() || [];
+let taskList = getLocalData();
 
 const displayTasks = () => {
   const listSection = document.querySelector('.tasks_list');

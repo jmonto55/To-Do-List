@@ -9,7 +9,7 @@ import { getLocalData, setLocalData } from './modules/storage.js'
 const addTaskText = document.querySelector('.add_to_list');
 const addTaskIcon = document.querySelector('#submit_icon');
 const refreshIcon = document.querySelector('#refresh_icon');
-const taskList = getLocalData() || [];
+const taskList = getLocalData();
 
 displayTasks();
 

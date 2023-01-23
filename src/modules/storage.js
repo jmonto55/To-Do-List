@@ -1,5 +1,5 @@
 const getLocalData = () => {
-    return JSON.parse(localStorage.getItem('toDoList'));
+    return JSON.parse(localStorage.getItem('toDoList')) || [];
 };
 
 const setLocalData = (str) => {
