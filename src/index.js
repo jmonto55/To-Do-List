@@ -9,25 +9,27 @@ import { getLocalData, setLocalData } from './modules/storage.js';
 const addTaskText = document.querySelector('.add_to_list');
 const addTaskIcon = document.querySelector('#submit_icon');
 const refreshIcon = document.querySelector('#refresh_icon');
-const taskList = getLocalData();
 
 displayTasks();
 
+const removeButtons = document.querySelectorAll('.remove_button');
+const taskTextareaArr = document.querySelectorAll('.task_textarea');
+const checkBoxArr = document.querySelectorAll('.to_do_input');
+const clearTasksButton = document.querySelector('.clear_tasks');
+
+const taskList = getLocalData();
 setLocalData(taskList);
 
-addTaskText.onchange = () => { addTaskToList(); };
-addTaskIcon.onclick = () => { addTaskToList(); };
-refreshIcon.onclick = () => { window.location.reload(); };
-
-const removeButtons = document.querySelectorAll('.remove_button');
+addTaskText.onchange = () => addTaskToList();
+addTaskIcon.onclick = () => addTaskToList();
+refreshIcon.onclick = () => window.location.reload();
 
 removeButtons.forEach((e) => {
-  e.onclick = () => { removeTaskFromList(e.parentElement.id); };
+  e.onclick = () => removeTaskFromList(e.parentElement.id);
 });
 
-const taskTextareaArr = document.querySelectorAll('.task_textarea');
 taskTextareaArr.forEach((e) => {
-  e.onchange = () => { editSelectedTask(e.parentElement.parentElement.id, e.value); };
+  e.onchange = () => editSelectedTask(e.parentElement.parentElement.id, e.value);
 });
 
 taskTextareaArr.forEach((e) => {
@@ -44,10 +46,8 @@ taskTextareaArr.forEach((e) => {
   };
 });
 
-const checkBoxArr = document.querySelectorAll('.to_do_input');
 checkBoxArr.forEach((e) => {
-  e.onchange = () => { toggleFinishedTask(e); };
+  e.onchange = () => toggleFinishedTask(e);
 });
 
-const clearTasksButton = document.querySelector('.clear_tasks');
-clearTasksButton.onclick = () => { clearSelectedTasks(); };
+clearTasksButton.onclick = () => clearSelectedTasks();
