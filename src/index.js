@@ -4,7 +4,7 @@ import displayTasks from './modules/displayTasks.js';
 import removeTaskFromList from './modules/removeTask.js';
 import editSelectedTask from './modules/editTask.js';
 import { toggleFinishedTask, clearSelectedTasks } from './modules/clarAllTasks.js';
-import { getLocalData, setLocalData } from './modules/storage.js'
+import { getLocalData, setLocalData } from './modules/storage.js';
 
 const addTaskText = document.querySelector('.add_to_list');
 const addTaskIcon = document.querySelector('#submit_icon');
@@ -51,13 +51,3 @@ checkBoxArr.forEach((e) => {
 
 const clearTasksButton = document.querySelector('.clear_tasks');
 clearTasksButton.onclick = () => { clearSelectedTasks(); };
-
-const updateIndex = (arr) => {
-  let i = 0;
-  arr.forEach((task) => {
-    task.index = i;
-    i += 1;
-  });
-};
-
-export default updateIndex;

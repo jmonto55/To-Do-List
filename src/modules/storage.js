@@ -1,9 +1,7 @@
-const getLocalData = () => {
-    return JSON.parse(localStorage.getItem('toDoList')) || [];
-};
+const getLocalData = () => JSON.parse(localStorage.getItem('toDoList')) || [];
 
 const setLocalData = (str) => {
-    localStorage.setItem('toDoList', JSON.stringify(str));
+  localStorage.setItem('toDoList', JSON.stringify(str));
 };
 
 export { getLocalData, setLocalData };

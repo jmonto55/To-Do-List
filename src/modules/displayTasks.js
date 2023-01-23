@@ -1,13 +1,13 @@
 import { getLocalData } from './storage.js';
 
-let taskList = getLocalData();
+const taskList = getLocalData();
 
 const displayTasks = () => {
   const listSection = document.querySelector('.tasks_list');
   listSection.innerHTML = '';
   taskList.forEach((e) => {
-    let completedCheck = e.completed ? 'checked' : '';
-    let styleCheck = e.completed ? 'line_through' : '';
+    const completedCheck = e.completed ? 'checked' : '';
+    const styleCheck = e.completed ? 'line_through' : '';
     listSection.innerHTML += `
       <li class="task" id="${e.index}">
         <div class="task_container">

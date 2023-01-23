@@ -1,5 +1,5 @@
 import displayTasks from './displayTasks.js';
-import updateIndex from '../index.js';
+import { updateIndex } from './clarAllTasks.js';
 import { getLocalData, setLocalData } from './storage.js';
 
 let taskList = getLocalData();
