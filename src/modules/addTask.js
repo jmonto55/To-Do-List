@@ -18,7 +18,7 @@ const addTaskToList = () => {
   taskList.push(newTask);
   setLocalData(taskList);
   displayTasks();
-  window.location.reload();
+  // window.location.reload();
 };
 
-export { Task, addTaskToList };
+export default addTaskToList;
