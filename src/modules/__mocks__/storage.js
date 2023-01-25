@@ -6,4 +6,6 @@ const setLocalData = (arr) => {
   array = arr;
 };
 
-export { getLocalData, setLocalData };
+const displayTasks = () => {
+};
+export { getLocalData, setLocalData, displayTasks };
