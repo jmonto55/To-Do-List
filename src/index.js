@@ -1,5 +1,5 @@
 import './style.css';
-import addTaskToList from './modules/addTask.js';
+import { addTaskToList } from './modules/addTask.js';
 import displayTasks from './modules/displayTasks.js';
 import removeTaskFromList from './modules/removeTask.js';
 import editSelectedTask from './modules/editTask.js';
