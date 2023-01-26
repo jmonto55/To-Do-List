@@ -8,8 +8,6 @@ const removeTaskFromList = (id) => {
   updateIndex(taskList);
   setLocalData(taskList);
   displayTasks();
-  // console.log(taskList);
-  // window.location.reload();
 };
 
 export default removeTaskFromList;
