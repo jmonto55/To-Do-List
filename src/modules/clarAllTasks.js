@@ -23,7 +23,6 @@ const clearSelectedTasks = () => {
   updateIndex(taskList);
   setLocalData(taskList);
   displayTasks();
-  window.location.reload();
 };
 
 export { toggleFinishedTask, clearSelectedTasks, updateIndex };
