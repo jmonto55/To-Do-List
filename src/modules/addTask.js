@@ -1,7 +1,7 @@
 import displayTasks from './displayTasks.js';
 import { getLocalData, setLocalData } from './storage.js';
 
-export class Task {
+class Task {
   constructor(description, index) {
     this.description = description;
     this.completed = false;
@@ -18,7 +18,6 @@ const addTaskToList = () => {
   taskList.push(newTask);
   setLocalData(taskList);
   displayTasks();
-  window.location.reload();
 };
 
 export default addTaskToList;
