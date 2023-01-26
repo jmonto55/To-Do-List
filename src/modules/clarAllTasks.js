@@ -13,6 +13,7 @@ const toggleFinishedTask = (e) => {
   e.nextElementSibling.classList.toggle('line_through');
   const { id } = e.parentElement.parentElement;
   const taskList = getLocalData();
+  console.log(taskList[id]);
   taskList[id].completed = !taskList[id].completed;
   setLocalData(taskList);
 };
