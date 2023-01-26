@@ -4,6 +4,7 @@
 
 import addTaskToList from './addTask.js';
 import removeTaskFromList from './removeTask.js';
+import editSelectedTask from './editTask.js';
 
 describe('Functionalities Tests', () => {
   document.body.innerHTML = '<div>'
@@ -23,5 +24,11 @@ describe('Functionalities Tests', () => {
     removeTaskFromList(0);
     const localData = JSON.parse(window.localStorage.getItem('toDoList'));
     expect(localData).toHaveLength(2);
+  });
+
+  test('should test if editTask is changing the correct task value from Local storage and DOM', () => {
+    editSelectedTask(0, 'Returning from a run');
+    const localData = JSON.parse(window.localStorage.getItem('toDoList'));
+    expect(localData[0].description).toBe('Returning from a run');
   });
 });
